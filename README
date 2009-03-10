@@ -2,5 +2,6 @@ This is the source code for the RailsWork site.
 
 A couple of notes:
 
-1. It's pretty old - probably requires Rails <1.2.6 
+1. It's pretty old - probably requires Rails <1.2.6  (although no reason it wouldn't work with Rails 2 with a tiny amount of effort)
 2. If you want to use it, don't copy the design. This is copyright.
+3. We've never really used the Paypal functionality - it works - but it doesn't validate the IPN callback with Paypal itself yet
