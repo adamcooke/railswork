@@ -1,0 +1,6 @@
+This is the source code for the RailsWork site.
+
+A couple of notes:
+
+1. It's pretty old - probably requires Rails <1.2.6 
+2. If you want to use it, don't copy the design. This is copyright.

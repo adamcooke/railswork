@@ -1,0 +1,40 @@
+<%@page_title = "Thank you"%>
+<div class="summary">
+<h2>Thank you, we have saved your new listing</h2>
+
+<%if @job.amount_payable > 0%>
+<p class="summary">You listing will cost <%=number_to_currency(@job.amount_payable)%> including a discount of <%=number_to_currency(@job.discount)%>.</p>
+
+<p>Before we can make your listing public, we need to collect payment from you. We use PayPal for all payment processing.  Please click the 'Pay with PayPal' link below to make your payment, as soon as we receive confirmation from PayPal, your listing will be made active on the Rails Work web site. </p>
+ 
+<p>Once your listing has been activated, you will receive an email with a password that will allow you to edit your listing.</p>
+
+
+<form action="https://<%=PAYPAL_CONFIG[:url]%>" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="<%=PAYPAL_CONFIG[:business_email]%>">
+<input type="hidden" name="item_name" value="Rails Work Listing">
+<input type="hidden" name="item_number" value="<%=@job.id%>">
+<input type="hidden" name="amount" value="<%=@job.amount_payable%>">
+<input type="hidden" name="buyer_credit_promo_code" value="">
+<input type="hidden" name="buyer_credit_product_category" value="">
+<input type="hidden" name="buyer_credit_shipping_method" value="">
+<input type="hidden" name="buyer_credit_user_address_change" value="">
+<input type="hidden" name="no_shipping" value="0">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="return" value="<%=PAYPAL_CONFIG[:return_url]%>">
+<input type="hidden" name="notify_url" value="<%=PAYPAL_CONFIG[:notify_url]%>">
+<input type="hidden" name="bn" value="PP-BuyNowBF">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but6.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<%else%>
+
+<p class="summary">Congratulations, you scored yourself a free listing!</p>
+<p>Your listing is already active and can be viewed <%=link_to "here", job_path(@job)%>. You will receive an email shortly containing a link which will allow you to modify your listing.</p>
+
+<%end%>
+</div>

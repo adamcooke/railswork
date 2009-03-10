@@ -1,0 +1,16 @@
+<%@page_title = "Terms of Service"%>
+<div class="pages">
+  <h2>Terms of Service</h2>
+  <ul>
+      <li>No refunds (but feel free to ask for one if you think you deserve it - sometimes we feel charitable).</li>
+      <li>If you find a bug, or the site goes down for any amount of time, please let us know. We make no uptime guarantees, and neither does our web host, but if the site goes down we won't leave you hanging.</li>
+      <li>Any information you share in your advertisement is displayed publicly on the site. We won't give out any additional info you tell us, however.</li>
+      <li>Payment processing is handled by <%=link_to "PayPal", "http://www.paypal.com", :rel => "external nofollow"%>, so be sure to check up on their <%=link_to "policies", "https://www.paypal.com/us/cgi-bin/webscr?cmd=p/gen/ua/ua-outside", :rel => "external nofollow"%>.</li>
+      <li>We remove spam, scams, offensive, and inappropriate ads, but we don't check out the companies that advertise positions here. Do your due diligence before sending anyone personal information. Similarly, we don't check out anyone who is applying for the jobs here either.</li>
+      <li>We will keep your e-mail address private and will not sell it to spammers (or anyone else for that matter).</li>
+  </ul>
+</div>
+
+<%content_for :right do%>
+  <%=render :partial => "jobs/right"%>
+<%end%>

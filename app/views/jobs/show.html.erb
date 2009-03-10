@@ -1,0 +1,24 @@
+<%@page_title = @job.full_title%>
+<div class="job_details">
+  <h2><%=link_to_unless @job.company_url.blank?, h(@job.company_name), h(@job.company_url), :rel => "external nofollow"%> <span>is looking for a</span> <%=h @job.title%> <span>in <b><%=h @job.location%></b></span></h2>
+  <p>This job was posted <%=distance_of_time_in_words_to_now(@job.created_at)%> ago and 
+    <%if @job.active?-%>will expire in <%=distance_of_time_in_words_to_now(@job.expires_at ||= 30.days.from_now)%><%else-%>is not yet active<%end-%>.</p>
+  
+  <h3>Job Description</h3>
+  <%=c @job.description, "<p><em>The author of this job has not provided a description - sorry :(</em></p>"%>
+  
+  <%unless @job.salary_range.blank?%><p class="salary"><b>Salary</b> <%=h @job.salary_range ||= "none provided"%></p><%end%>
+  
+  <h3>How to apply...</h3>
+  <%=c @job.application_instructions, "<p>Contact #{@job.contact_email} for further information"%>
+</div>
+
+<%content_for :right do%>
+  <%=render :partial => "right"%>
+  <%if logged_in?%>
+  <ul>
+    <li><%=link_to "Edit this Job", edit_job_path(@job)%></li>
+    <li><%=link_to "Remove this Job", remove_job_path(@job) %></li>
+  </ul>
+  <%end%>
+<%end%>

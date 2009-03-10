@@ -1,0 +1,28 @@
+<%@page_title = "Coupon Manager"%>
+<div class="admin">
+<h2>Coupon Manager</h2>
+<table width="100%" class="data_table" style="border-collapse:collapse;">
+  <thead>
+    <tr>
+      <td>Code</td>
+      <td>Type</td>
+      <td>Value</td>
+      <td>Global</td>
+      <td>Uses</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <%for coupon in @coupons%>
+    <tr>
+      <td><%="<del>" if coupon.expired?%><%=coupon.code%><%="</del>" if coupon.expired?%></td>
+      <td><%=coupon.discount_type.capitalize%></td>
+      <td><%=coupon.amount%></td>
+      <td><%=coupon.global? ? "Yes" : "No"%></td>
+      <td><%=coupon.uses%></td>
+      <td><%=link_to "Edit", edit_coupon_path(coupon)%> | <%=link_to "Delete", coupon_path(coupon), :method => "delete", :confirm => "Are you sure?"%></td>
+    <%end%>
+  </tbody>
+</table>
+<p><%=link_to "Create New Coupon", new_coupon_path%></p>
+</div>

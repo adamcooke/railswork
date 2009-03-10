@@ -1,0 +1,12 @@
+<%@page_title = "About Rails Work"%>
+<div class="pages">
+  <h2>About Rails Work</h2>
+  <p>Rails Work is a job board dedicated to connecting employers with Ruby on Rails experts and top notch designers. Whether your company is looking for a full time employee or a contract worker for a single project, Rails Work is an economical way to get the details about your open position out to thousands of Rails experts and web developers.</p>
+  <p>Rails Work comes from the same people behind <%= link_to "Rails Forum", "http://www.railsforum.com", :rel => "external"%>, the web's largest forum dedicated to Ruby on Rails, and <%=link_to "Railsify", "http://www.railsify.com", :rel => "external"%>, the web's premier Rails plugin directory.</p>
+  <p>If you need to get in touch with the Rails Work team for any reason, contact <%=mail_to "info@railsify.com"%>.</p>
+
+</div>
+
+<%content_for :right do%>
+  <%=render :partial => "jobs/right"%>
+<%end%>

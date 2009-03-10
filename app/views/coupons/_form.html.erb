@@ -1,0 +1,25 @@
+<%=error_messages_for :coupon%>
+<fieldset>
+  <legend>Coupon Details</legend>
+<dl>
+  <dt><label for="coupon_code">Coupon Code</label></dt>
+  <dd><%=form.text_field :code, :class => "code"%></dd>
+  
+  <dt><label for="coupon_discount_type">Discount Type</label></dt>
+  <dd><%=form.select :discount_type, Coupon::TYPES%></dd>
+  
+  <dt><label for="coupon_value">Value</label></dt>
+  <dd><%=form.text_field :amount, :class => "value" %></dd>
+  
+  
+  <dt><label for="coupon_global">Global Coupon?</label></dt>
+  <dd><%=form.check_box :global%> This can be used unlimited times until it is marked as expired</dd>
+  
+  <dt><label for="coupon_expired">Expired?</label></dt>
+  <dd><%=form.check_box :expired%> This coupon cannot be used any more</dd>
+  
+  
+  
+</dl>
+</fieldset>
+<p class="alignright"><%=submit_tag "Save Coupon"%></p>

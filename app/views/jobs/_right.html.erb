@@ -1,0 +1,18 @@
+  <p><b>Rails Work is the best place to post and find great Ruby on Rails jobs.</b></p>
+  <table width="100%" class="prices">
+    <caption>How much does it cost?</caption>
+    <thead>
+      <tr>
+        <td>Days</td>
+        <td>Price</td>
+    </thead>
+    <tbody>
+      <%for type in Job::LISTING_LENGTHS%>
+      <tr class="<%=cycle("o", "e")%>">
+        <td><%=type[2]%></td>
+        <td class="price"><%=number_to_currency(type[1])%><%if type[2] == 30%><div><p>Best Deal!</p></div><%end%></td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+  <p>Because we're related to the <%=link_to "Rails Forum", "http://www.railsforum.com", :rel => "external"%> community, there are already thousands of potential Rails rockstars looking for a project to work on. Post your job and get in touch with one of them today!</p>

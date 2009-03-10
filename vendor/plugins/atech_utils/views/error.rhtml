@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+	<title>Sorry, an error has occured</title>
+	<style type="text/css">
+	<%= IO.read(File.join(RAILS_ROOT, 'vendor/plugins/atech_utils/assets/style.css')) %>
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Sorry, an error has occured</h1>
+		<p>We cannot process this request, if this issue persists please contact the webmaster or application administrator.</p>
+	</div>
+	<div id="code">
+		<p>Error Code: <strong><%=@code%></strong></p>
+	</div>
+</body>
+</html>

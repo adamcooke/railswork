@@ -1,0 +1,10 @@
+<%@page_title = "Remove Listing ##{@job.id}"%>
+<div class="pages">
+<h2>Remove Listing #<%=@job.id%></h2>
+<p>If you have filled your position or no longer need your listing for any other reason, you can remove it by clicking the button below.</p>
+<p>Please Note: if you remove your listing before your expiry date, you will not receive a refund.</p>
+<%form_tag job_path(@job), :method => :delete do %>
+  <%=hidden_field_tag "pw", params[:pw]%>
+  <button type="submit">Delete this listing immediately</button> or <%=link_to "cancel", job_path(@job)%>
+<%end%>
+</div>

@@ -1,0 +1,8 @@
+<%@page_title = "Post New Listing"%>
+<div class="editadd_job">
+<h2>Post New Listing</h2>
+<p>To add your job listing, fill out the form below. Remember to include as much information about the position as possible, including a way for prospective candidates to contact you.  Once you are satisfied, click "Save This Listing." You will be directed to PayPal to process payment for your advert.  After you've paid, an email will be sent to you with instructions to edit or remove your listing at any time. You will not be charged for any edits you make.</p>
+<%form_for :job, :url => jobs_path do |f|%>
+  <%=render :partial => "form", :object => f%>
+<%end%>
+</div>

@@ -1,0 +1,49 @@
+<%=error_messages_for :job%>
+<fieldset>
+  <legend>About the Job</legend>
+  <dl>
+    <dt><label for="job_title">We're looking for a...</label></dt>
+    <dd><%=form.text_field :title, :class => "title"%></dd>
+    <dt><label for="job_salary_range">Salary</label></dt>
+    <dd><%=form.text_field :salary_range, :class => "salary"%><br /><span>For example: <code>$15,000 per year</code> or <code>$20,000 to $50,000</code></span></dd>
+    <dt><label for="job_location">Where is this job?</label></dt>
+    <dd><%=form.text_field :location, :class => "location"%></dd>
+    <dt><label for="job_description">Job Description</label></dt>
+    <dd><%=form.text_area :description, :rows => 10%></dd>
+    <dt><label for="job_application_instructions">How to Apply</label></dt>
+    <dd><%=form.text_area :application_instructions, :rows => 5%></dd>
+  </dl>
+</fieldset>
+
+<fieldset>
+  <legend>About the Company</legend>
+  <dl>
+    <dt><label for="job_company_name">Company Name</label></dt>
+    <dd><%=form.text_field :company_name, :class => "company"%></dd>
+    <dt><label for="job_company_url">Company Website</label></dt>
+    <dd><%=form.text_field :company_url, :class => "url"%></dd>
+  </dl>
+</fieldset>
+<%if @job.new_record?%>
+<fieldset>
+  <legend>About the Listing</legend>
+  <dl>
+    <dt><label for="job_contact_email">Your E-Mail Address</label></dt>
+    <dd><%=form.text_field :contact_email, :class => "email"%> (not published)</dd>
+    <dt><label for="job_category">Select a category</label></dt>
+    <dd><%=form.select :category, Job::CATEGORIES, :prompt => "select a category:"%></dd>
+    <dt><label for="job_listing_length">Listing Length</label></dt>
+    <dd><%=form.select :listing_length, Job::LISTING_LENGTHS%></dd>
+    <dt><label for="job_coupon_code">Coupon Code</label></dt>
+    <dd><%=form.text_field :coupon_code, :class => "coupon"%></dd>
+  </dl>
+</fieldset>
+<%end%>
+
+<p class="alignright"><button class="save" type="submit">Save this Listing</button><%unless @job.new_record?%>or <%=link_to "cancel", job_path(@job)%><%end%></p>
+<%=hidden_field_tag "pw", params[:pw]%>
+
+<%content_for :right do%>
+  <p>The job description and application instructions can be formatted with <%=link_to "textile", "http://textism.com/tools/textile/", :rel => "external nofollow"%>.</p>
+  <p>Your e-mail address will never be published, it is only used to send you links to allow you to edit and remove your listing.</p>
+<%end%>

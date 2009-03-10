@@ -1,0 +1,8 @@
+<%@page_title = @job.full_title%>
+<div class="editadd_job">
+<h2>Edit Listing #<%=@job.id%></h2>
+
+<%form_for :job, :url => job_path(@job), :html => {:method => "put"} do |f|%>
+  <%=render :partial => "form", :object => f%>
+<%end%>
+</div>

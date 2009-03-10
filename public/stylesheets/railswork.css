@@ -1,0 +1,241 @@
+/* 
+
+  RailsWork Stylesheet
+  (C) 2007 The railswork Team. All Rights Reseved.
+  
+  Description:  Root Stylesheet for RailsWork
+  Author:       AdamC
+  Version:      1.1
+  Created:      1st September 2007
+  
+  The site design for railswork (www.railswork.com) is copyright to the railswork Team. The design itself may 
+  not be copied, duplicated, sold, licenced or replicated in anyway withour written permission from the copyright
+  holders. However, you may use the information below as a reference point for your own projects.
+  
+*/
+
+/* Global Root Elements */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+body {background:#f7f6e7; font-family:Verdana, Helvetica, sans-serif; font-size:11px; margin:0; border-top:6px solid #b42c39; color:#2b2b2b;}
+input { font-family: Verdana, Helvetica, Arial, sans-serif; font-size:12px; padding:3px;}
+h1 { display:none; }
+h2, h3, h4 { font-family:Arial, Verdana, sans-serif; color:#b93649;  }
+a { color:#2b2b2b; }
+a img { border:0;}
+form { margin:0; padding:0; }
+textarea { font-family:Verdana, Arial, sans-serif; font-size:100%; line-height:1.3;}
+
+/* Page Wrapper, Standard Elements and Rails Default Outputs */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#wrapper { width:920px; margin:auto;}
+#flash-notice { background:#333; color:#fff; font-weight:bold; font-size:120%; padding:7px; margin-bottom:10px;}
+#flash-notice p { margin:0;}
+#flash-error { background:#c8132a; color:#fff; font-weight:bold; font-size:120%; padding:7px; margin-bottom:10px;}
+#flash-error p { margin:0;}
+#errorExplanation {border:0; margin:0; padding:0; background:#f3f3f3;}
+#errorExplanation h2 { background:#b42c39; color:#fff; font-size:130% !important; padding:8px;}
+#errorExplanation p { font-weight:bold; color:#b42c39; margin:0; margin:8px;}
+#errorExplanation ul { margin:0; padding:0; list-style:none; margin:8px 8px 20px 8px;}
+#errorExplanation ul:after {content:".";height:0;visibility:hidden;display:block;clear:both;}
+#errorExplanation ul li { padding:0; float:left; padding-bottom:5px; margin-right:15px; display:block; background:url(/images/railswork/bullet_red.gif) no-repeat 1% 5px; padding-left:14px;}
+.fieldWithErrors input, .fieldWithErrors textarea { border:2px dotted #ebbbc0 !important;} 
+
+
+
+hr.hidden { display:none;}
+#content .no_data { text-align:center; font-size:200%; color:#ccc; margin:20px 0;}
+p.aligncentre { text-align:center;}
+p.alignright { text-align:right;}
+a.rss { background:url(/images/railswork/icons/rss.png) no-repeat 0 50%; padding-left:14px;}
+
+.free_listings { position:absolute;margin-left:500px;}
+
+.prices { text-align:center; border-collapse:collapse; margin-bottom:10px;}
+.prices caption { font-size:110%; font-weight:bold; color:#b93649; margin-bottom:8px;margin-top:10px;}
+.prices thead { background:#fff; font-weight:bold; color:#666; border-bottom:2px solid #e6e4c9; border-top:2px solid #e6e4c9;}
+.prices td { padding:5px;}
+.prices tbody td { font-size:160%;vertical-align:top;}
+.prices tbody td.price { color:#b93649}
+.prices tbody td.price div { display:block; font-size:45%; font-weight:bold; text-transform:uppercase; margin-top:5px;}
+.prices tbody td.price div p { background:#b93649; color:#fff !important; margin:0; padding:0; display:inline; padding:2px;}
+.prices tbody tr { border-top:1px solid #e6e4c9; }
+
+/* Header, User Navigation and Top Meta Navigation */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#meta_nav { float:right; font-size:80%; color:#515151; }
+#meta_nav ul { margin:0; padding:0; list-style:none;}
+#meta_nav ul li { display:inline; text-transform:lowercase; margin-left:15px;}
+#meta_nav ul li a { color:#515151; text-decoration:none;}
+#meta_nav ul li a.active { color:#b42c39; font-weight:bold;}
+#meta_nav ul li a:hover { text-decoration:underline;}
+#header { background:url(/images/railswork/header_bg.gif) no-repeat; height:140px; margin-top:10px;}
+#header p { display:none;}
+#header div.favourite_selector {float:right; margin-top:35px; margin-right:15px;}
+#header div.favourite_selector select { font-size:110%;}
+#header ul { list-style:none; height:36px;font-size:16px; color:#fff; margin:0; padding:0; padding-top:76px; padding-left:52px; font-weight:normal;}
+#header li { display:inline; vertical-align:middle; }
+#header li.advice { margin-left:50px;}
+#header li.search { margin-left:362px; margin-right:10px;}
+#header li a { color:#fff; text-decoration:none;}
+#header li a:hover { color:#fffbb8;}
+#header li input { border:0; font-size:11px; padding:5px;margin-top:-4px;}
+#header li input.inactive { color:#666; background:#fff; color:#ccc;}
+#header li input.active { color:#666; background:#fff;}
+#header li button { background:url(/images/railswork/go.gif) no-repeat; width:41px; height:23px; border:0; text-indent:-40000px; margin-left:5px;}
+#header .user_nav { font-size:100%; padding:8px 10px 0 13px;}
+#header .user_nav p {display:block; margin:0;}
+#header .user_nav ul {margin:0; padding:0; height:0; float:right;}
+#header .user_nav ul li { float:left; font-size:11px; color:#333; margin-right:15px; font-size:70%;}
+#header .user_nav ul li a { color:#333;}
+#header .user_nav p a { }
+#header .user_nav p.not_logged_in { text-align:right; padding-right:70px; font-style:italic;}
+#header .user_nav p.welcome { float:left;}
+
+/* Content */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content { float:left; width:706px; background:url(/images/railswork/content_footer.gif) no-repeat bottom center #fff; }
+#content .inner { padding:12px;}
+#content h2 { margin-top:0; font-size:170%; margin-bottom:10px;}
+#content h3 { border-bottom:3px solid #f7f6e7; padding-bottom:5px; font-size:130%;}
+#content h4 { font-size:110%;}
+#content p { line-height:1.5;}
+
+/* Job List */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .jobs_list h2 { float:left; }
+#content .jobs_list p { font-size:120%;}
+#content .jobs_list p.no_data { font-size:200%;}
+#content .jobs_list p.rss_available { text-align:right; font-style:italic;}
+#content .jobs_list ul#sub_nav { margin:0; padding:0; list-style:none;}
+#content .jobs_list ul#sub_nav li { font-size:90%; line-height:0; display:inline; float:left; line-height:0; padding:0; margin-left:30px; margin-top:3px;}
+#content .jobs_list ul#sub_nav li a { padding:4px; border:0; color:#666;}
+#content .jobs_list ul#sub_nav li.active a { background:#b42c39; color:#fff;}
+#content .jobs_list #jobs { clear:both;}
+#content .jobs_list ul { margin:0; padding:0; list-style:none; }
+#content .jobs_list ul li.even { background-color:#f4f4f4 !important;}
+#content .jobs_list ul li { padding:10px; padding-left:30px; }
+#content .jobs_list ul li span {font-size:120%; font-weight:bold;}
+#content .jobs_list ul li a { color:#d70000; text-decoration:none;font-weight:bold; font-size:125%; line-height:1.5;border-bottom:1px dotted #ccc; }
+#content .jobs_list ul li.technical { background:url(/images/railswork/job_icons/programming.gif) no-repeat 1.5% 50%;}
+#content .jobs_list ul li.design { background:url(/images/railswork/job_icons/design.gif) no-repeat 1.5% 50%;}
+#content .jobs_list ul li.other { background:url(/images/railswork/job_icons/other.gif) no-repeat 1.5% 50%;}
+#content .jobs_list ul li.community { background:url(/images/railswork/job_icons/community.gif) no-repeat 1.5% 50%;}
+
+/* Job Details */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .job_details h2 { font-size:160%; margin-bottom:10px;}
+#content .job_details h2 a { color:#b93649;}
+#content .job_details h2 span { font-size:80%; color:#999; font-weight:normal; line-height:1.5;}
+#content .job_details h2 + p{ font-size:95%; color:#666; margin:0;}
+#content .job_details p { font-size:120%;}
+#content .job_details ul { font-size:120%; line-height:1.5}
+#content .job_details p a { padding:1px;}
+#content .job_details p a:hover { background:#000; color:#fff; text-decoration:none;}
+#content .job_details p.salary { display:inline; background:#ffdde0;padding:3px;}
+#content .job_details p.salary b { margin-right:15px;}
+
+/* Edit or Add Job Form */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .editadd_job h2 { margin-bottom:0px;}
+#content .editadd_job p { font-size:120%;}
+#content .editadd_job fieldset { border:0; border-top:3px solid #dedcbe; font-size:11px; margin-top:20px;}
+#content .editadd_job fieldset legend {font-size:13px;font-weight:bold; padding:0 5px 0 0;}
+#content .editadd_job fieldset textarea { width:95%; padding:4px;}
+#content .editadd_job fieldset dt { width:220px; float:left;padding-top:4px;}
+#content .editadd_job fieldset dd { margin-left:220px; margin-bottom:15px;}
+#content .editadd_job fieldset dd span { line-height:2.0;}
+#content .editadd_job fieldset dd code { background:#ffdde0; font-family:Verdana, Helvetica, sans-serif; padding:1px;}
+#content .editadd_job fieldset input { border:1px solid #ccc; padding:5px 5px 5px 24px; background-repeat:no-repeat; background-position:1% 50%; width:70%; }
+
+#content .editadd_job fieldset input.title {background-image:url(/images/railswork/icons/title16.png);  }
+#content .editadd_job fieldset input.salary {background-image:url(/images/railswork/icons/salary16.png);  }
+#content .editadd_job fieldset input.location {background-image:url(/images/railswork/icons/location16.png);  }
+#content .editadd_job fieldset input.company {background-image:url(/images/railswork/icons/company16.png);  }
+#content .editadd_job fieldset input.url {background-image:url(/images/railswork/icons/url16.png);  }
+#content .editadd_job fieldset input.email {background-image:url(/images/railswork/icons/email16.png); }
+#content .editadd_job fieldset input.coupon {background-image:url(/images/railswork/icons/coupon16.png);width:30%;}
+
+#content .editadd_job button.save { background:url(/images/railswork/buttons/save_listing.gif) no-repeat; width:135px; height:23px; border:0; text-indent:-40000px;}
+#content .editadd_job fieldset ul { margin:0; padding:0; list-style:none;}
+#content .editadd_job fieldset ul li { float:left; width:33%; margin-bottom:5px;}
+#content .editadd_job fieldset ul:after {content:".";height:0;visibility:hidden;display:block;clear:both;}
+#content .editadd_job fieldset .gem_name { margin:0px 20px; backgrond:#333; font-size:120%; padding:5px; font-family:"Courier New", Verdana, Arial, sans-serif;}
+#content .editadd_job fieldset .gem_name input { padding-left:4px; font-family:"Courier New", Verdana, Arial, sans-serif;}
+
+/* Listing Summary */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .summary p.summary { font-size:140%; font-weight:bold;}
+#content .summary p { font-size:130%;}
+
+/* Admin */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .admin {}
+#content .admin fieldset { border:0; border-top:3px solid #dedcbe; font-size:11px; margin-top:20px;}
+#content .admin fieldset legend {font-size:13px;font-weight:bold; padding:0 5px 0 0;}
+#content .admin fieldset textarea { width:95%; padding:4px;}
+#content .admin fieldset dt { width:220px; float:left;padding-top:4px;}
+#content .admin fieldset dd { margin-left:220px; margin-bottom:15px;}
+#content .admin fieldset dd span { line-height:2.0;}
+#content .admin fieldset dd code { background:#ffdde0; font-family:Verdana, Helvetica, sans-serif; padding:1px;}
+#content .admin fieldset input { border:1px solid #ccc; padding:5px; background-repeat:no-repeat; }
+
+
+/* Pages */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .pages {}
+#content .pages p { font-size:140%;}
+#content .pages ul { font-size:140%; line-height:1.5; }
+#content .pages code { background:#fffbbd; padding:2px; font-family:Verdana, Arial, sans-serif; font-weight:bold;}
+#content .pages p a { padding:1px;}
+#content .pages p a:hover { background:#000; color:#fff; text-decoration:none;}
+
+/* Table */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .data_table {}
+#content .data_table thead { background:#ccc;  color:#666}
+#content .data_table td { padding:3px;}
+
+/* Popups and Overlays */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#overlay {height: 942px; opacity: 0.8; background:#000000;position:absolute; z-index:90;top:0pt; width:100%;left:0pt;}
+#popup { border:5px solid #000000; background:#ffffff; z-index:100; position:absolute; padding:15px; text-align:center;}
+#popup h4 { font-size:160%; margin:0;}
+#popup p { font-size:140%; line-height:1.5; margin-top:5px;; }
+#popup input { width:95%;}
+
+/* Right */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#right {margin-left:706px; }
+#right .inner { padding:10px;}
+#right p { margin-top:0; font-size:100%; line-height:1.8; color:#a4a282;}
+#right p a {text-decoration:none; color:#a4a282; border-bottom:1px dotted #a4a282;}
+#right .not_logged_in_arrow { position:absolute; margin-left:-55px; margin-top:-15px;}
+#right ul {list-style:none; padding:0; margin:10px;}
+#right ul li { background:url(/images/railswork/bullet.gif) no-repeat center left; padding-left:10px; margin-bottom:10px; color:#a4a282;}
+#right ul li a { color:#a4a282; text-decoration:none; border-bottom:1px dotted #a4a282; }
+#right ul li a:hover { border-bottom:1px solid #a4a282;}
+#right h2 { font-size:14px;}
+
+/* Footer */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#footer { clear:both; padding-top:10px; color:#b7b484; font-size:90%;}
+#footer p a { color:#b7b484; text-decoration:none; border-bottom:1px dotted #b7b484;}
+#footer p { margin:0; line-height:20px; }
+#footer p.nav { margin-bottom:10px;}
+#footer a img { border:0; }
+#footer p.supporters a { border:0; margin:0; vertical-align:middle; line-height:25px;}
+

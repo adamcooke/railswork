@@ -1,0 +1,27 @@
+<%@page_title = "Search Results"%>
+<div class="search">
+  <h2>Your Search Results</h2>
+  
+  <%unless @total_hits == 0%>
+  
+  <p>You searched for <code><%=h params[:q]%></code>. The search returned <b><%=pluralize(@total_hits, 'hit')%></b>, take your pick...</p>
+  <div class="jobs_list">
+    <%=render :partial => "jobs/jobs", :object => @results %>
+  </div>
+  
+  <%else%>
+    <p><b>Sorry, I couldn't find anything matching <code><%=h params[:q]%></code> on the job board.</b></p>
+    <p>How about refinining your search slightly? You can refine your search using the tips below, otherwise, I'm afraid, we can't help much.</p>
+    
+    <h3>Refining your search</h3>
+    <ul>
+        <li>"ruby rails" - will return results which contain both "ruby" and "rails" in any order.</li>
+        <li>"ruby OR rails" - will return results which contain either "ruby" or "rails"</li>
+        <li>"title:GUI Designer" - search for all results where the title is "GUI Designer"</li>
+        <li>"company_name:Apple Computers Inc" - search for all results where the company is "Apple Computers Inc"</li>
+        <li>"location:London" - search for all results where the location is "London"</li>
+    </ul>
+      
+  <%end%>
+  
+</div>

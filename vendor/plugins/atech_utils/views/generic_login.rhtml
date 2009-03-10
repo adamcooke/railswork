@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+	<title>Please login</title>
+	<style type="text/css">
+	<%= IO.read(File.join(RAILS_ROOT, 'vendor/plugins/atech_utils/assets/style.css')) %>
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Please login</h1>
+		<%=flash_display%>
+		<%form_tag do %>
+		<table width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="title user"><label for="username">Username</label></td>
+				<td><%=text_field_tag :username%></td>
+			<tr>
+			<tr>
+				<td class="title password"><label for="password">Password</label></td>
+				<td><%=password_field_tag :password%></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input class="submit_button" name="login" type="submit" value="Sign In &raquo;" /></td>
+			</tr>
+		</table>
+		<%end%>
+		<p>If you cannot login, please contact your technical support contact who will be able to assist.</p>
+	</div>
+
+</body>
+</html>

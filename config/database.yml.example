@@ -1,0 +1,10 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: railswork
+  username: railswork
+  password: 
+  host: localhost
+
+production:
+  development

@@ -1,0 +1,7 @@
+<%@page_title = "Edit Coupon"%>
+<div class="admin">
+<h2>Edit Coupon</h2>
+<%form_for :coupon, :url => coupon_path(@coupon), :html => {:method => :put} do |f|%>
+  <%=render :partial => "form", :object => f%>
+<%end%>
+</div>

@@ -1,0 +1,4 @@
+url: www.paypal.com/cgi-bin/webscr
+business_email: payments@railsify.com
+notify_url: http://railswork.com/ipn
+return_url: http://railswork.com

@@ -1,0 +1,11 @@
+<%if jobs.empty?%>
+  <p class="no_data">Oh dear, sorry, there aren't any jobs in this category.</p>
+<%else%>
+<ul>
+    <%for job in jobs%>
+    <li class="<%=job.category.downcase%> <%=cycle("odd", "even")%>"><span class="company"><%=job.company_name%></span> is looking for a <%=link_to job.title, job_path(job)%> in <b><%=job.location%></b>.</li>
+    <%end%>
+</ul>
+
+<%if @category%><p class="rss_available">This information is also available as an <%=link_to "RSS Feed", formatted_category_path(@category, 'rss'), :class => "rss"%></p><%end%>
+<%end%>

@@ -1,0 +1,103 @@
+/* 
+
+  Railsify Stylesheet
+  (C) 2007 The Railsify Team. All Rights Reseved.
+  
+  Description:  Root Stylesheet for Railsify
+  Author:       AdamC
+  Version:      1.0
+  Created:      18th August 2007
+  
+  The site design for Railsify (www.railsify.com) is copyright to the Railsify Team. The design itself may 
+  not be copied, duplicated, sold, licenced or replicated in anyway withour written permission from the copyright
+  holders. However, you may use the information below as a reference point for your own projects.
+  
+*/
+
+/* Global Root Elements */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Page Wrapper, Standard Elements and Rails Default Outputs */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Header, User Navigation and Top Meta Navigation */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Content */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Category Browser */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Plugins Details */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .plugin .properties ul.tabs { margin-top:30px;}
+
+#content .plugin .properties ul.tabs li a { display:block;}
+
+#content .plugin .pretext pre { overflow:auto; padding:0; margin:0; padding-bottom:5px; width:682px;}
+#content .plugin .last_updated { float:right;font-size:80%; color:#999; margin-top:8px;}
+
+
+
+/* Pagination */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Comments */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Plugin Results */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Login*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content .login .left { float:left; margin-left:5px;}
+#content .login .right { float:right; margin-right:5px;}
+#content .square_box dl { margin:0 20px;}
+#content .login_button {  display:block;}
+
+/* Sign Up */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+#content .signup button.create { display:block; float:left;}
+
+
+/* Person */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Right */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#right { margin-left:0px; float:left; }
+#right .inner { padding-right:0px;}
+
+/* Footer */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#footer { clear:both; padding-top:10px; color:#b7b484; font-size:90%; padding-left:12px;}
+#footer p a { color:#b7b484; text-decoration:none; border-bottom:1px dotted #b7b484;}
+#footer p { margin:0; line-height:20px; }
+#footer p.nav { margin-bottom:10px;}
+#footer a img { border:0; }
+#footer p.supporters a { border:0; margin:0; vertical-align:middle; line-height:25px;}
+
+
+

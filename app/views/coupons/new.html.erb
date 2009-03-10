@@ -1,0 +1,7 @@
+<%@page_title = "Create New Coupon"%>
+<div class="admin">
+<h2>Create New Coupon</h2>
+<%form_for :coupon, :url => coupons_path do |f|%>
+  <%=render :partial => "form", :object => f%>
+<%end%>
+</div>

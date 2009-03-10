@@ -1,0 +1,52 @@
+/* 
+
+  Railsify Stylesheet
+  (C) 2007 The Railsify Team. All Rights Reseved.
+  
+  Description:  Stylesheet for use on error pages
+  Author:       AdamC
+  Version:      1.0
+  Created:      22nd August 2007
+  
+  The site design for Railsify (www.railsify.com) is copyright to the Railsify Team. The design itself may 
+  not be copied, duplicated, sold, licenced or replicated in anyway withour written permission from the copyright
+  holders. However, you may use the information below as a reference point for your own projects.
+  
+*/
+
+/* Global Root Elements */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+body {background:#f7f6e7; font-family:Verdana, Helvetica, sans-serif; font-size:11px; margin:0; border-top:6px solid #b42c39; color:#2b2b2b;}
+input { font-family: Verdana, Helvetica, Arial, sans-serif; font-size:12px; padding:3px;}
+h2, h3, h4 { font-family:Arial, Verdana, sans-serif; color:#b93649;  }
+a { color:#2b2b2b; }
+a img { border:0;}
+form { margin:0; padding:0; }
+textarea { font-family:Verdana, Arial, sans-serif; font-size:100%; line-height:1.3;}
+
+/* Page Wrapper, Standard Elements and Rails Default Outputs */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#wrapper { width:920px; margin:auto;}
+#flash-notice { background:#333; color:#fff; font-weight:bold; font-size:120%; padding:7px; margin-bottom:10px;}
+#flash-notice p { margin:0;}
+#flash-error { background:#c8132a; color:#fff; font-weight:bold; font-size:120%; padding:7px; margin-bottom:10px;}
+#flash-error p { margin:0;}
+#errorExplanation {border:0; margin:0; padding:0; background:#f3f3f3;}
+#errorExplanation h2 { background:#b42c39; color:#fff; font-size:130% !important; padding:8px;}
+#errorExplanation p { font-weight:bold; color:#b42c39; margin:0; margin:8px;}
+#errorExplanation ul { margin:0; padding:0; list-style:none; margin:8px 8px 20px 8px;}
+#errorExplanation ul:after {content:".";height:0;visibility:hidden;display:block;clear:both;}
+#errorExplanation ul li { padding:0; float:left; padding-bottom:5px; margin-right:15px; display:block; background:url(/images/railsify/bullet_red.gif) no-repeat 1% 5px; padding-left:14px;}
+.fieldWithErrors input { border:2px dotted #ebbbc0 !important;} 
+
+hr.hidden { display:none;}
+#content .no_data { text-align:center; font-size:200%; color:#ccc; margin:20px 0;}
+p.aligncentre { text-align:center;}
+
+/* Block Title */
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+#content h1 { font-size:110%; color:#b42c39; text-transform:uppercase;}
+#content { width:450px; background:white; margin:auto; padding:10px; font-size:140%; line-height:1.5; text-align:center;}
